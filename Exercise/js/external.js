@@ -10,9 +10,9 @@ var favoriteColor = prompt("What is your favorite color?");
 alert('Great, ' + favoriteColor + ' is my favorite color too!');
 console.log('The user entered'+ favoriteColor);
 
-var littleMermaidDays = prompt("How many days are  you renting The Little Mermaid for?");
-var brotherBearDays = prompt("How many days are  you renting Brother Bear for?");
-var herculesDays = prompt("How many days are  you renting Hercules for?");
+var littleMermaidDays = prompt("How many days are you renting The Little Mermaid for?");
+var brotherBearDays = prompt("How many days are you renting Brother Bear for?");
+var herculesDays = prompt("How many days are you renting Hercules for?");
 
 var totalDays = parseInt(littleMermaidDays) + parseInt(brotherBearDays) + parseInt(herculesDays);
 var totalPrice = totalDays * 3;
@@ -44,24 +44,9 @@ if (userInputClassFull === "yes"){
 } else {
     alert("You are enrolled")}
 
-let numberOfItems = prompt("How many items are you buying?");
-let offerExpired = false;
-let isPremiumMember = true;
+//Part 3 Part 4
+var isOfferValid = prompt("Is the offer still valid?");
+var isPremiumMember = confirm("Do you have a Kroger card?");
+var cartSize = prompt("How many items are in your cart?");
 
-// Checking if the offer has expired
-if (offerExpired) {
-    alert("Sorry, the offer has expired and cannot be applied.");
-} else {
-    // Checking if the person is a premium member
-    if (isPremiumMember) {
-        alert("Congratulations! You are a premium member and can apply the product offer.");
-    } else {
-        // Checking if the person is buying more than the 2 items required for offer
-        if (numberOfItems > 2) {
-            alert("Congratulations! You have bought more than 2 items and can apply the product offer.");
-        } else {
-            alert("Sorry, you need to buy more than 2 items to apply the product offer.");
-        }
-    }
-}
-
+alert("Customer can have discount: " + (isOfferValid && (isPremiumMember || cartSize > 2))); 
