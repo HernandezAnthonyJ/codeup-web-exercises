@@ -1,5 +1,6 @@
 (function(){
     "use strict";
+    //(ah) Self notes
 
     var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
     var planetsArray;
@@ -12,7 +13,7 @@
      */
     //(ah)created a new array called planetsArray by splitting planetsString using the comma as the separator
     //(ah) planetsArray contains same planet names as "planetStrings" but each is now its own element in the array
-    planetsArray = planetsString.split(",");
+    planetsArray = planetsString.split("|");
 
     console.log(planetsArray);
 

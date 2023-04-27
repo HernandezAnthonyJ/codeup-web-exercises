@@ -1,6 +1,7 @@
 (function(){
     "use strict";
 //(ah) Self notes
+
     var planets = [
         'Mercury',
         'Venus',
