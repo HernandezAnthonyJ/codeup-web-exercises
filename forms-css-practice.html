@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register with Us</title>
+  <!-- CSS/ setting max width of area to 500
+        margin 0 auto centering the content horizontally within by setting left & right
+        font setting to arial
+        setting font to 16px(default size)
+        line height set to 1.5x the font size. adds spacing -->
+  <style>
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  <!-- -->
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    select,
+    textarea {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    fieldset {
+      border: none;
+      margin-bottom: 20px;
+    }
+
+    legend {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    button[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #0069d9;
+    }
+  </style>
+
+</head>
+<body>
+<!-- using a form tag to create a form with method & action.
+      Method=POST to send form data to the server in the HTTP.
+      Using action to specify the URL that will process all the form data.
+      When user clicks submit the form data should be sent to the URL using post-->
+<h1>Registration Form</h1>
+<form method="POST" action="https://request-inspector.glitch.me/">
+  <!-- label tag used to create a label for the input associated with the "for" attribute
+        So Email is displayed before the input for users input.
+        input used to create the input field. type is set to email for a valid email. id & name are set to email to identify the input in the submitted data
+        placeholder to provide user with info on what should be entered
+        added required attribute to show the field must be filled out before the form can be submitted-->
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" placeholder="Enter your email" required>
+  <br> <!-- line break -->
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" placeholder="Enter your password" required>
+  <br>
+
+  <label for="bio">Tell us about yourself:</label>
+  <!-- textarea for bio -->
+  <textarea id="bio" name="bio" placeholder="Enter your bio"></textarea>
+  <br>
+
+  <!-- grouping related form input together using the fieldset element -->
+  <fieldset>
+    <!-- a caption for the <fieldset> element/everything within it-->
+    <legend>How did you hear about us?</legend>
+    <label>
+      <input type="radio" name="source" value="billboard" required>
+      Billboard
+    </label>
+    <br>
+    <label>
+      <input type="radio" name="source" value="radio advertisement">
+      Radio Advertisement
+    </label>
+    <br>
+    <label>
+      <input type="radio" name="source" value="internet advertisement">
+      Internet Advertisement
+    </label>
+    <br>
+    <label>
+      <input type="radio" name="source" value="other">
+      Other
+    </label>
+  </fieldset>
+  <br>
+
+  <label for="browser">What browser are you using?</label>
+  <select id="browser" name="browser" required>
+    <option value="">Please select</option>
+    <option value="Chrome">Chrome</option>
+    <option value="Firefox">Firefox</option>
+    <option value="Safari">Safari</option>
+    <option value="Edge">Edge</option>
+    <option value="Opera">Opera</option>
+    <option value="Other">Other</option>
+  </select>
+  <br>
+
+  <button type="submit">Submit</button>
+</form>
+</body>
+</html>
