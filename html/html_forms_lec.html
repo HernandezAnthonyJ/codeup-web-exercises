@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>HTML Forms Lecture</title>
+  <!-- HTML Forms defined by using <form> element -->
 </head>
 <body>
-$END$
+    <form method="get" action="https://request-inspector.glitch.me/">
+    <label for="value">Value</label>
+    <input type="text" name="username" id="value" placeholder="What's your favorite cheese?" value="muenster">
+    <label for="pw">Password</label>
+    <input type="password" name="pw" id="pw">
+    <label for="body">Body</label>
+    <textarea name="body" id="body" cols="30" rows="10"></textarea>
+    <br>
+    <h3>How can we contact you in the future?</h3>
+    <input type="checkbox" id="no-tm" name="notification-options" value="text-messaging" checked>
+    <label for="no-tm">Text Messaging</label>
+        <input type="checkbox" id="no-e" name="notification-options" value="email" checked>
+        <label for="no-e">Email</label>
+        <input type="checkbox" id="no-sm" name="notification-options" value="mail" >
+        <label for="no-sm">Post (Mail)</label>
+        <h3>What is 2 + 2?</h3>
+        <input type="radio" id="mq-a" name="math-question" value="a"> <label for="mq-a">1</label>
+        <input type="radio" id="mq-b" name="math-question" value="a"> <label for="mq-a">22</label>
+        <input type="radio" id="mq-c" name="math-question" value="a"> <label for="mq-a">4</label>
+        <input type="radio" id="mq-d" name="math-question" value="a"> <label for="mq-a">20</label>
+        <h3>What's your favorite Dreamworks film?</h3>
+        <select name="name" id="fav-dreamworks-film">
+            <option value="shrek">Shrek</option>
+            <option value="megamind">Megamind</option>
+            <option value="kungfupanda">Kung Fu Panda</option>
+            <option value="shrek4">Shrek Forever After</option>
+            <option value="puss-in-boots-2">Puss in boots: The Last Wish</option>
+        </select>
+        <input type="hidden" name="secret" value="i dont really like that many cheeses">
+
+
+        <!-- <input type="submit" value="Go">-->
+        <button>Let's Go!</button>
+    </form>
 </body>
 </html>
