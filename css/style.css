@@ -1,62 +1,80 @@
-body {
-    background-color: #f2f2f2;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0;
-}
-
-header, main, footer {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
-    color: #333;
-}
-
-.hero {
-    background-image: url(https://images.pexels.com/photos/1213440/pexels-photo-1213440.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-    background-size: cover;
-    background-position: center;
-}
+/* Shoto Todoroki Color Palette :) */
+/* https://www.color-hex.com/color-palette/80514 */
 
 .fancy-header {
     text-align: center;
+    color: #923025; /* single line comment */
+    text-decoration: underline;
+    font-weight: bolder;
+    font-size: 3em;
+}
+
+header p {
+    color: #f8f0d0;
+    font-weight: bold;
+}
+
+h2 {
+    color: #a22821;
     text-decoration: underline;
 }
 
-ul, ol {
-    list-style: none;
-    padding-left: 0;
+hr {
+    border: 0;
+    height: 5px;
+    background-image: linear-gradient(to right, #923025, #fcf2c1);
 }
 
-table {
-    border-collapse: collapse;
-    width: 100%;
+body {
+    background-color: #53968d;
+    opacity: 100%;
+    background-size: 100%;
+    background-repeat: repeat-y;
 }
 
-td, th {
-    padding: 0.75rem;
-    font-size: 1.1rem;
+ul {
+    color: #bce9e4;
+    list-style: square inside;
 }
 
-tr:nth-child(odd) {
-    background-color: #f9f9f9;
+ol {
+    list-style: upper-roman;
+    color: #bce9e4;
+    list-style-position: inside;
 }
 
-a {
-    color: #333;
-    text-decoration: none;
+* {
+    font-family: "Gill Sans", sans-serif;
 }
 
-a:hover {
-    text-decoration: underline;
+table, th, td {
+    border: 2px solid #fcf2c1;
+    font-size: larger;
+    color: #f8f0d0;
+    text-align: center;
+}
+
+.center {
+    margin: 0;
+}
+
+a:link {
+    color: blue;
 }
 
 a:visited {
-    color: #666;
+    color: #bce9e4;
+}
+
+a:hover {
+    color: darkgreen;
 }
 
 a:active {
-    color: #000;
+    color: red;
+}
+
+div>img {
+    border: #fcf2c1 solid 7px;
 }
 
