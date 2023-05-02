@@ -34,3 +34,25 @@ findFactors("13"); // returns false;
 findFactors([54,72,144]); // returns false;
 findFactors({value: 64}); // returns false;
 findFactors(); // returns false;
+
+
+function countEs(str) {
+    //typeof to check if the str is a string. if not typeof str !== string evals to true
+    //
+    if (typeof str !== 'string') {
+        return false;
+    }
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i].toLowerCase() === 'e') {
+            count++;
+        }
+    }
+    return count;
+}
+console.log(countEs("Ease")); // returns 2;
+console.log(countEs("teleconference")); // returns 5;
+console.log(countEs("TOM")); // returns 0;
+console.log(countEs(true)); // returns false;
+console.log(countEs(['e', 'E'])); // returns false;
+console.log(countEs()); // returns false;
