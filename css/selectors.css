@@ -1,4 +1,5 @@
 /* selector for id="container" */
+
 #container {
     margin: 50px auto;
     width: 500px;
@@ -18,10 +19,12 @@
 em {
     font-weight: bold;
 }
+
 /* selector for all elements with class="article" */
 .article {
     clear:both;
 }
+
 /*  selector for all "anchor" elements
     that are a direct child of an element with class="article" */
 .article > a {
