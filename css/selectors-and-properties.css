@@ -1,0 +1,68 @@
+p {
+    color: crimson;
+    text-indent: 2em;
+}
+
+.heading {
+    color: steelblue;
+}
+
+#main-heading {
+    color: #3E363F;
+    text-decoration: underline firebrick;
+    text-align: center;
+    font-family: 'Oxygen', sans-serif;
+}
+
+#main-heading, .reminder {
+    background-color: yellow;
+}
+
+.make-bigger {
+    font-size: 2em;
+}
+
+h1.make-bigger {
+    font-size: 4em;
+}
+
+h1.heading {
+    color: indigo;
+}
+
+h2.heading {
+    color: sandybrown;
+}
+
+.reminder.make-bigger {
+    color: mediumturquoise;
+}
+
+footer p {
+    color: olivedrab;
+}
+
+footer>p {
+    color: orchid;
+}
+
+a:link {
+    color: green;
+}
+
+a:visited {
+color: orange;
+}
+
+a:hover {
+    color: hotpink;
+    background-color: #EF0;
+}
+
+a:active {
+    color: #3C896D;
+}
+
+#cheese {
+    width:100vh;
+}
