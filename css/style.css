@@ -1,6 +1,7 @@
 /* Shoto Todoroki Color Palette :) */
 /* https://www.color-hex.com/color-palette/80514 */
 
+/* text content aligned to center. added underline. text bolded. 3em font.*/
 .fancy-header {
     text-align: center;
     color: #923025; /* single line comment */
@@ -8,23 +9,26 @@
     font-weight: bolder;
     font-size: 3em;
 }
-
+/* all <p> elements. setting font weight to bold. Shoto Palette 3 */
 header p {
-    color: #f8f0d0;
+    color: #fcf2c1;
     font-weight: bold;
 }
 
+/* added underline to h2. Shoto Palette 5 */
 h2 {
     color: #a22821;
     text-decoration: underline;
 }
 
+/* setting background of horizontal rule to a linear gradient. from left to right with gradient will blend */
 hr {
     border: 0;
     height: 5px;
     background-image: linear-gradient(to right, #923025, #fcf2c1);
 }
 
+/* Shoto Palette 2 for 100% background. opacity 100%. background repeated vertically */
 body {
     background-color: #53968d;
     opacity: 100%;
@@ -32,11 +36,13 @@ body {
     background-repeat: repeat-y;
 }
 
+/* setting bullet style to square */
 ul {
     color: #bce9e4;
     list-style: square inside;
 }
 
+/* setting ol list to roman numerals. */
 ol {
     list-style: upper-roman;
     color: #bce9e4;
@@ -47,6 +53,7 @@ ol {
     font-family: "Gill Sans", sans-serif;
 }
 
+/* adding 2px border around table, th, td. text aligned center */
 table, th, td {
     border: 2px solid #fcf2c1;
     font-size: larger;
