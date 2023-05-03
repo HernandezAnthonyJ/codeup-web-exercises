@@ -56,3 +56,11 @@ console.log(countEs("TOM")); // returns 0;
 console.log(countEs(true)); // returns false;
 console.log(countEs(['e', 'E'])); // returns false;
 console.log(countEs()); // returns false;
+
+function containsE(str) {
+    if (typeof str !== 'string') {
+        return false;
+    }
+    return str.toLowerCase().indexOf('e') !== -1;
+}
+
