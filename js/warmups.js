@@ -63,4 +63,22 @@ function containsE(str) {
     }
     return str.toLowerCase().indexOf('e') !== -1;
 }
+// Write a function named fizzBuzz that prints to the console the number 1 - 100.
+// If the number is divisible by 3 print fizz instead of the number.
+// If the number is divisible by 5 print buzz.
+// If the number is divisible by both 3 and 5 print fizzBuzz.
+
+function fizzBuzz() {
+    for (let i = 1; i <= 100; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("fizzBuzz");
+        } else if (i % 3 === 0) {
+            console.log("fizz");
+        } else if (i % 5 === 0) {
+            console.log("buzz");
+        } else {
+            console.log(i);
+        }
+    }
+}
 

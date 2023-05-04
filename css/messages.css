@@ -16,18 +16,18 @@ div {
     width: 70%;
 }
 .message-info {
-    background-color: lightskyblue;
+    background-color: #CDDEFF;
     color: darkblue;
 }
 .message-success {
-    background-color: palegreen;
+    background-color: #CFF3DA;
     color: green;
 }
 .message-warning {
-    background-color: yellow;
+    background-color: #FCFBC9;
     color:tan;
 }
 .message-error {
-    background-color: palevioletred;
+    background-color:#FAD3D7;
     color: mediumvioletred;
 }
