@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The viewport meta tag instructs the page to match the screen's width.
+    This allows the page to match different screen sizes, whether rendered on a small mobile phone or a large desktop monitor. -->
+    <title>Media Queries Lecture</title>
+</head>
+<body>
+<!--Media queries are generally perceived as the most important tool in your belt when it comes to building a responsive website.
+They allow you to target CSS based on the pixel width of the viewable area and make changes based on those dimensions.
+
+@Media is used to define a media query in CSS. Allows you to specify different styles for different media types.
+screen specifies that the media type targeted by this query is a computer screen.
+And is used to combine multiple media features within a single media query.
+Min-width:500px is a feature that checks the minimum width of the viewport.
+    /* screen sizes 500px and up */
+@media screen and (min-width:500px) {
+    selector {
+      property: value;
+  }
+}
+-->
+<!--
+/* screen sizes between 960px and 1200px */
+@media screen and (min-width:960px) and (max-width:1200px) {
+/* ... */
+}
+-->
+
+<!-- Breakpoints are what we refer to as major resolution changes, which you specify with media queries,
+usually based on popular device configurations. They are called breakpoints because traditionally major layout elements are broken and repositioned,
+though not always the case, and the name stuck.
+
+/* Small devices (phones and pocket devices, 576 and up) */
+@media screen and (min-width:576px) { /* ... */ }
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width:768px) { /* ... */ }
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width:992px) { /* ... */ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width:1200px) { /* ... */ }
+-->
+
+</body>
+</html>
