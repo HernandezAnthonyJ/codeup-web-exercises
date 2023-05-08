@@ -2,12 +2,12 @@
 * {
     box-sizing: border-box;
 }
-
+/* Sets the body element to 0 */
 body {
     margin: 0;
 }
-/*nav styled with light grey displayed in flex cont. space between for even distribute.*/
-/*centered flex items with align items. font set to work sans.*/
+/*nav styled with light grey. display set to flex allowing elements to be in flex container. space between for even distribute across main axis.*/
+/*align items set to center, vertically aligning items. font set to work sans.*/
 nav {
     background-color: lightgray;
     display: flex;
@@ -15,7 +15,7 @@ nav {
     align-items: center;
     font-family: 'Work Sans', sans-serif;
 }
-/*for ul elements inside nav bar. padding/margin @ 0. display flex.*/
+/*for ul elements inside nav bar. padding/margin @ 0, removes default spacing. display flex. list style none to remove default bullet points.*/
 /*centered items horizontally with justify content. flex set to 1 to distribute space with ul elements.*/
 header nav ul {
     padding: 0;
@@ -32,7 +32,7 @@ header nav .nav-bar-logo {
     font-size: 2em;
     padding: .2em;
 }
-
+/* a (anchor) elements within the nav element inside a header element. display property to inline-block */
 header nav a {
     display: inline-block;
     color: black;
@@ -43,12 +43,12 @@ header nav a {
 header nav a:hover {
     color: blue;
 }
-
+/* aligned items to left side of nav bar using flex-start */
 header nav .nav-l {
     justify-content: flex-start;
     font-size: 12px;
 }
-
+/* aligned items to left side of nav bar using flex-end */
 header nav .nav-r {
     justify-content: flex-end;
     font-size: 12px;
