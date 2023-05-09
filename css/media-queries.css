@@ -1,0 +1,127 @@
+@media screen and (max-width:991px) {
+
+    div.alert-info a {
+        background: #BEFFFF;
+        width: 100%;
+        height: 3em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        text-decoration: none;
+        border: 2px solid lightgray;
+    }
+    h1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-links {
+        /*list-style: none;*/
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    /*.nav-link li  {*/
+    /*    display: flex;*/
+    /*    flex-direction: column;*/
+    /*    justify-content: space-between;*/
+    /*    border: 2px solid lightgray;*/
+    /*    background-color: lightgray;*/
+    /*}*/
+
+    .nav-links li {
+        background-color: lightgray;
+        padding: 5px;
+        display: flex;
+        text-align: center;
+        border: 1px;
+        margin-bottom: 5px;
+    }
+
+    .nav-links a {
+        margin: auto;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    footer {
+        bottom: 0;
+        width: 100%;
+        font-size: .5em;
+        margin-top: 4em;
+    }
+
+}
+
+@media screen and (min-width:992px) {
+    /**{*/
+    /*    box-sizing: border-box;*/
+    /*}*/
+
+    div.alert-info a {
+        display:none;
+    }
+    /*h1, nav  {*/
+    /*    display: inline-flex;*/
+    /*    !*justify-content: space-between;*!*/
+    /*}*/
+
+    /*body {*/
+    /*    display: flex;*/
+    /*}*/
+
+    h1 {
+        float: left;
+        text-align: left;
+    }
+
+    nav {
+        float: right;
+
+    }
+
+    .nav-links{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        height: auto;
+        width: 25vw;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        /*margin: 0;*/
+        /*padding: 0;*/
+    }
+    a {
+        color: blue;
+    }
+    /*.header-img {*/
+    /*    width: 890px;*/
+    /*    height: 385px;*/
+    /*}*/
+    .main {
+        float: left;
+        width: 60%;
+    }
+
+    .sub-section {
+        float: right;
+        width: 40%;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: .5em;
+    margin-top: 4em;
+}
