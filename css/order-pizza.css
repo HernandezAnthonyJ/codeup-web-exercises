@@ -1,0 +1,20 @@
+.jumbotron h1 {
+    background-color: lightgray;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    opacity: 0.75;
+    color: black;
+}
+
+.jumbotron {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/CodeHutPizza_1323x346.jpeg");
+    height: 346px;
+    background-size: cover;
+
+}
+
