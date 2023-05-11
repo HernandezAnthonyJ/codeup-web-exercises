@@ -1,12 +1,12 @@
-.jumbotron h1 {
-    background-color: lightgray;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    opacity: 0.75;
-    color: black;
-}
+/*.jumbotron h1 {*/
+/*    background-color: lightgray;*/
+/*    width: 100vw;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    text-align: center;*/
+/*    opacity: 0.75;*/
+/*    color: black;*/
+/*}*/
 
 .jumbotron {
     display: flex;
