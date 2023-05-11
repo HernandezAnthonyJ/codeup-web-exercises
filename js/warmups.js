@@ -107,4 +107,15 @@ console.log(addEmUp([-100])); // returns -100
 console.log(addEmUp([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // returns 55
 console.log(addEmUp([-13, -92, -3500])); // returns -3605
 
+function explainString(str) {
+    const numberOfEs = (str.match(/e/ig) || []).length;
+    const isEvenLength = str.length % 2 === 0;
+
+    return {
+        string: str,
+        numberOfEs: numberOfEs,
+        isEvenLength: isEvenLength
+    };
+}
+
 
