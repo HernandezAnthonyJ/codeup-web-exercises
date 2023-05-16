@@ -82,40 +82,130 @@
 //     }
 // }
 
-int = i = 2;
-do {
-    System.out.println(i*i);
-    i *= i;
-} while(i < 1000000);
+// int = i = 2;
+// do {
+//     System.out.println(i*i);
+//     i *= i;
+// } while(i < 1000000);
+//
+// // Write a function that takes in an array of numbers and returns all of the numbers added together
+// // (We'll be assuming that only arrays are going to be used with this function).
+//
+// function addEmUp(numbers) {
+//     let sum = 0;
+//
+//     for (let i = 0; i < numbers.length; i++) {
+//         sum += numbers[i];
+//     }
+//
+//     return sum;
+// }
+// console.log(addEmUp([2, 6, 19])); // returns 27
+// console.log(addEmUp([-99, 180, -5])); // returns 76
+// console.log(addEmUp([44, 10, 7])); // returns 61
+// console.log(addEmUp([-100])); // returns -100
+// console.log(addEmUp([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // returns 55
+// console.log(addEmUp([-13, -92, -3500])); // returns -3605
+//
+// function explainString(str) {
+//     const numberOfEs = (str.match(/e/ig) || []).length;
+//     const isEvenLength = str.length % 2 === 0;
+//
+//     return {
+//         string: str,
+//         numberOfEs: numberOfEs,
+//         isEvenLength: isEvenLength
+//     };
+// }
 
-// Write a function that takes in an array of numbers and returns all of the numbers added together
-// (We'll be assuming that only arrays are going to be used with this function).
+// const hamsters = [
+//     {
+//         name: "Hamtaro",
+//         heightInMM: 86,
+//         fur: ['orange', 'white'],
+//         gender: "male",
+//         dateOfBirth: "August 6"
+//     } , {
+//         name: "Bijou",
+//         heightInMM: 75,
+//         fur: ['white'],
+//         gender: "female",
+//         dateOfBirth: "July 10"
+//     } , {
+//         name: "Oxnard",
+//         heightInMM: 100,
+//         fur: ['grey', 'white'],
+//         gender: "male",
+//         dateOfBirth: "May 3"
+//     } , {
+//         name: "Boss",
+//         heightInMM: 120,
+//         fur: ['brown', 'white'],
+//         gender: "male",
+//         dateOfBirth: "September 21"
+//     } , {
+//         name: "Snoozer",
+//         heightInMM: 85,
+//         fur: ['brown', 'white', "pink"],
+//         gender: "male",
+//         dateOfBirth: "January 14"
+//     }
+// ];
+// function extractNames(arr) {
+//     const names = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         names.push(arr[i].name);
+//     }
+//     return names;
+// }
+// console.log(extractNames(hamsters)); // returns ["Hamtaro", "Bijou", "Oxnard", "Boss", "Snoozer"]
 
-function addEmUp(numbers) {
-    let sum = 0;
 
-    for (let i = 0; i < numbers.length; i++) {
-        sum += numbers[i];
+
+const hamsters = [
+    {
+        name: "Hamtaro",
+        heightInMM: 86,
+        fur: ['orange', 'white'],
+        gender: "male",
+        dateOfBirth: "August 6"
+    } , {
+        name: "Bijou",
+        heightInMM: 75,
+        fur: ['white'],
+        gender: "female",
+        dateOfBirth: "July 10"
+    } , {
+        name: "Oxnard",
+        heightInMM: 100,
+        fur: ['grey', 'white'],
+        gender: "male",
+        dateOfBirth: "May 3"
+    } , {
+        name: "Boss",
+        heightInMM: 120,
+        fur: ['brown', 'white'],
+        gender: "male",
+        dateOfBirth: "September 21"
+    } , {
+        name: "Snoozer",
+        heightInMM: 85,
+        fur: ['brown', 'white', "pink"],
+        gender: "male",
+        dateOfBirth: "January 14"
+    }
+];
+
+function findTallestHamster(hamsters) {
+    let tallestHamster = null;
+    let maxHeight = -Infinity;
+
+    for (let i = 0; i < hamsters.length; i++) {
+        if (hamsters[i].heightInMM > maxHeight) {
+            maxHeight = hamsters[i].heightInMM;
+            tallestHamster = hamsters[i];
+        }
     }
 
-    return sum;
+    return tallestHamster;
 }
-console.log(addEmUp([2, 6, 19])); // returns 27
-console.log(addEmUp([-99, 180, -5])); // returns 76
-console.log(addEmUp([44, 10, 7])); // returns 61
-console.log(addEmUp([-100])); // returns -100
-console.log(addEmUp([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // returns 55
-console.log(addEmUp([-13, -92, -3500])); // returns -3605
-
-function explainString(str) {
-    const numberOfEs = (str.match(/e/ig) || []).length;
-    const isEvenLength = str.length % 2 === 0;
-
-    return {
-        string: str,
-        numberOfEs: numberOfEs,
-        isEvenLength: isEvenLength
-    };
-}
-
-
