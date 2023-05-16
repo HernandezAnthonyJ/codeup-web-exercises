@@ -162,6 +162,53 @@
 
 
 
+// const hamsters = [
+//     {
+//         name: "Hamtaro",
+//         heightInMM: 86,
+//         fur: ['orange', 'white'],
+//         gender: "male",
+//         dateOfBirth: "August 6"
+//     } , {
+//         name: "Bijou",
+//         heightInMM: 75,
+//         fur: ['white'],
+//         gender: "female",
+//         dateOfBirth: "July 10"
+//     } , {
+//         name: "Oxnard",
+//         heightInMM: 100,
+//         fur: ['grey', 'white'],
+//         gender: "male",
+//         dateOfBirth: "May 3"
+//     } , {
+//         name: "Boss",
+//         heightInMM: 120,
+//         fur: ['brown', 'white'],
+//         gender: "male",
+//         dateOfBirth: "September 21"
+//     } , {
+//         name: "Snoozer",
+//         heightInMM: 85,
+//         fur: ['brown', 'white', "pink"],
+//         gender: "male",
+//         dateOfBirth: "January 14"
+//     }
+// ];
+//
+// function findTallestHamster(hamsters) {
+//     let tallestHamster = null;
+//     let maxHeight = -Infinity;
+//
+//     for (let i = 0; i < hamsters.length; i++) {
+//         if (hamsters[i].heightInMM > maxHeight) {
+//             maxHeight = hamsters[i].heightInMM;
+//             tallestHamster = hamsters[i];
+//         }
+//     }
+//
+//     return tallestHamster;
+// }
 const hamsters = [
     {
         name: "Hamtaro",
@@ -195,17 +242,13 @@ const hamsters = [
         dateOfBirth: "January 14"
     }
 ];
-
-function findTallestHamster(hamsters) {
-    let tallestHamster = null;
-    let maxHeight = -Infinity;
-
-    for (let i = 0; i < hamsters.length; i++) {
-        if (hamsters[i].heightInMM > maxHeight) {
-            maxHeight = hamsters[i].heightInMM;
-            tallestHamster = hamsters[i];
-        }
-    }
-
-    return tallestHamster;
+function singleFurColor(hamsters) {
+    return hamsters.filter((hamster) => hamster.fur.length === 1);
 }
+console.log(singleFurColor(hamsters)); // returns [{name: "Bijou", heightInMM: 75, fur: ['white'], gender: "female", dateOfBirth: "July 10"}];
+
+
+
+
+
+
