@@ -24,7 +24,10 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
-
+<button id="button1">Button 1</button>
+<button id="button2">Button 2</button>
+<button id="button3">Button 3</button>
+<button id="button4">Button 4</button>
 <script>
     (function() {
         "use strict";
@@ -32,27 +35,47 @@
         var mainHeader = document.getElementById("main-header");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool";
+        // mainHeader.innerHTML = "JavaScript is Cool";
+        document.getElementById("button1").addEventListener("click", function(){
+            mainHeader.innerHTML = "JavaScript is Cool";
+        });
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById("sub-header");
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue";
+        // subHeader.style.color = "blue";
+        document.getElementById("button2").addEventListener("click", function(){
+            subHeader.style.color = "blue";
+        });
         // TODO: Uncomment the next line and get all list items
         var listItems = document.querySelectorAll("li");
         // https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
 
         // TODO: Set text color on every other list item to grey
-        // TODO: Set text color of li with dbid = 1 to blue
         //for loop
-        for (var i = 0; i < listItems.length; i++) {
-            if (i % 2 === 1) {
-                listItems[i].style.color = "grey";
+        // for (var i = 0; i < listItems.length; i++) {
+        //     if (i % 2 === 1) {
+        //         listItems[i].style.color = "grey";
+        //     }
+        // }
+
+        // I think I got it? :(
+        document.getElementById("button3").addEventListener("click", function(){
+            for(var i = 1; i < listItems.length; i=i+2){
+                listItems [i].style.color = "grey";
             }
-        }
-        var liWithDbId1 = document.querySelector('li[data-dbid="1"]');
-        liWithDbId1.style.color = "blue";
+        });
+        // TODO: Set text color of li with dbid = 1 to blue
+        document.getElementById("button4").addEventListener("click", function(){
+            for(var x = 0; x < listItems.length; x++) {
+                if (listItems[x].getAttribute("data-dbid") ==1){
+                    listItems[x].style.color = "blue";
+                }
+            }
+        });
+        // var liWithDbId1 = document.querySelector('li[data-dbid="1"]');
+        // liWithDbId1.style.color = "blue";
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.querySelectorAll(".sub-paragraph");
@@ -64,6 +87,8 @@
         }
         firstSubPar("Mission Accomplished!");
     })();
+
+
 </script>
 </body>
 </html>
