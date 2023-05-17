@@ -242,11 +242,24 @@ const hamsters = [
         dateOfBirth: "January 14"
     }
 ];
-function singleFurColor(hamsters) {
-    return hamsters.filter((hamster) => hamster.fur.length === 1);
-}
-console.log(singleFurColor(hamsters)); // returns [{name: "Bijou", heightInMM: 75, fur: ['white'], gender: "female", dateOfBirth: "July 10"}];
+// function singleFurColor(hamsters) {
+//     return hamsters.filter((hamster) => hamster.fur.length === 1);
+// }
+// console.log(singleFurColor(hamsters)); // returns [{name: "Bijou", heightInMM: 75, fur: ['white'], gender: "female", dateOfBirth: "July 10"}];
 
+function mostColorful(objects) {
+    let maxColors = 0;
+    let mostColorfulObject = null;
+
+    for (const object of objects) {
+        if (object.fur && object.fur.length > maxColors) {
+            maxColors = object.fur.length;
+            mostColorfulObject = object;
+        }
+    }
+
+    return mostColorfulObject;
+}
 
 
 
