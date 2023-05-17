@@ -1,0 +1,58 @@
+body {
+    font-family: 'Barlow', sans-serif;
+    background: #211A1D;
+    color: #6320EE;
+    font-size: 1.25em;
+}
+
+#main-heading {
+    font-family: 'Slackey', cursive;
+}
+
+#click-me {
+    border-radius: 25px;
+    background: #6320EE;
+    color: #211A1D;
+    border: solid 2px dimgrey;
+    padding: .25em;
+    font-size: 1.25em;
+    font-family: 'Barlow', sans-serif;
+}
+
+.dom-lec-start #click-me {
+    border-radius: 25px;
+    background: #303036;
+    color: #FC5130;
+    border: solid 2px dimgrey;
+    padding: .25em;
+    font-size: 1.5em;
+    font-family: 'Teko', sans-serif;
+}
+
+.dom-lec-start {
+    font-family: 'Teko', sans-serif;
+    background: #FC5130;
+    color: #303036;
+}
+
+.dom-lec-start #main-heading {
+    font-family: 'Kumar One Outline', cursive;
+}
+
+#main-heading.makeItBlue {
+    color: royalblue;
+    font-family: 'Barlow', sans-serif;
+}
+
+img {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.good-pass {
+    background: #2e8151;
+    color: #D81159;
+}
