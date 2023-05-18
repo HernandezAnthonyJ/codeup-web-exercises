@@ -261,6 +261,29 @@ function mostColorful(objects) {
     return mostColorfulObject;
 }
 
+function describeNumber(number) {
+
+    var result = {
+        number: number,
+        evenOrOdd: number % 2 === 0 ? "even" : "odd",
+        factors: [],
+        numberOfDigits: number.toString().length
+    };
+
+
+    for (var i = 1; i <= number; i++) {
+        if (number % i === 0) {
+            result.factors.push(i);
+        }
+    }
+
+    return result;
+}
+
+console.log(describeNumber(19)); // returns {number: 19, evenOrOdd: "odd", factors: [1,19], numberOfDigits: 2};
+console.log(describeNumber(2)); // returns {number: 2, evenOrOdd: "even", factors: [1,2], numberOfDigits: 1};
+
+
 
 
 
