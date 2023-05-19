@@ -283,6 +283,14 @@ function describeNumber(number) {
 console.log(describeNumber(19)); // returns {number: 19, evenOrOdd: "odd", factors: [1,19], numberOfDigits: 2};
 console.log(describeNumber(2)); // returns {number: 2, evenOrOdd: "even", factors: [1,2], numberOfDigits: 1};
 
+function multiplyElementsByThree(numbers) {
+    return numbers.map(number => number * 3);
+}
+
+console.log(multiplyElementsByThree([3,4,5])); // returns [9, 12, 15];
+console.log(multiplyElementsByThree([12,8])); // returns [36, 24];
+console.log(multiplyElementsByThree([100])); // returns [300];
+console.log(multiplyElementsByThree([15, 9, 33, 16, 50])); // returns [45, 27, 99, 48, 150];
 
 
 
