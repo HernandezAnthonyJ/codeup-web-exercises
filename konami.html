@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    "use strict";
+
+    var konamiCodeSequence = [];
+    var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+    //37:left, 38:up, 39:right, 40:down, 65:a, 66:b, 13:enter
+
+    $(document).keyup(function(event) {
+        konamiCodeSequence.push(event.keyCode); //retrieves key code of the pressed key and adds it to the konamiCodeSequence
+        //konamiCodeSequence array only retains recent key codes
+        konamiCodeSequence = konamiCodeSequence.slice(-konamiCode.length);//https://www.w3schools.com/jsref/jsref_slice_array.asp
+    // https://www.w3schools.com/js/js_json.asp
+        //JSON.stringify() used to convert both the konamiCodeSequence and konamiCode
+        if (JSON.stringify(konamiCodeSequence) === JSON.stringify(konamiCode)) {
+            alert("You have added 30 lives!");
+        }
+    });
+</script>
+</body>
+</html>
