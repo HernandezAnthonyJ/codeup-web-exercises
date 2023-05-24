@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FAQ - National Parks</title>
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<h1>National Parks Facts</h1>
+
+<dl>
+    <dt>Yellowstone National Park:</dt>
+    <dd class="invisible">was created as the first national park in the United States.</dd>
+
+    <dt>Yosemite National Park:</dt>
+    <dd class="invisible">in California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoia trees, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</dd>
+
+    <dt>Grand Canyon National Park:</dt>
+    <dd class="invisible">in Arizona, is home to much of the immense Grand Canyon, with its layered bands of red rock revealing millions of years of geological history. </dd>
+
+    <!-- Repeat the pattern for remaining FAQs -->
+    <dt>Grand Teton Natinal Park:</dt>
+    <dd class="invisible">in the northwest of the U.S state of Wyoming. It encompasses the Teton mountain range, the 4,000-meter Grand Teton peak, and the valley known as Jackson Hole.</dd>
+
+    <dt>Everglades National Park:</dt>
+    <dd class="invisible">a 1.5-million-acre wetlands preserve on the southern tip of the U.S. state of Florida. </dd>
+
+    <dt>Congaree National Park:</dt>
+    <dd class="invisible">is a 26,692.6-acre American national park in central South Carolina, 18 miles southeast of the state capital, Columbia.</dd>
+
+    <dt>Olympic National Park:</dt>
+    <dd class="invisible">is on Washington's Olympic Peninsula in the Pacific Northwest. The park sprawls across several different ecosystems, from the dramatic peaks of the Olympic Mountains to old-growth forests.</dd>
+
+    <dt>Joshua Tree National Park:</dt>
+    <dd class="invisible">The park has over 2,000 natural stone arches, hundreds of soaring pinnacles, massive rock fins, and giant balanced rocks.</dd>
+
+    <dt>Bryce Canyon National Park:</dt>
+    <dd class="invisible">a sprawling reserve in southern Utah, is known for crimson-colored hoodoos, which are spire-shaped rock formations.</dd>
+
+    <dt>Capitol Reef National Park:</dt>
+    <dd class="invisible">is in Utah's south-central desert. It surrounds a long wrinkle in the earth known as the Waterpocket Fold, with layers of golden sandstone, canyons and striking rock formations.</dd>
+</dl>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('<a href="#" id="toggleLink">Toggle Answers</a>').insertBefore('dl');
+
+        $('#toggleLink').click(function(e) {
+            e.preventDefault();
+            $('dd').toggleClass('invisible');
+        });
+    });
+</script>
+
+</body>
+</html>
