@@ -6,6 +6,9 @@
         .invisible {
             visibility: hidden;
         }
+        .highlight {
+            background-color: yellow;
+        }
     </style>
 </head>
 <body>
@@ -43,6 +46,45 @@
     <dt>Capitol Reef National Park:</dt>
     <dd class="invisible">is in Utah's south-central desert. It surrounds a long wrinkle in the earth known as the Waterpocket Fold, with layers of golden sandstone, canyons and striking rock formations.</dd>
 </dl>
+
+<ul>
+    <li>
+        <h3>Yellowstone National Park</h3>
+        <ul>
+            <li>Fact 1</li>
+            <li>Fact 2</li>
+            <li>Fact 3</li>
+            <li>Fact 4</li>
+        </ul>
+    </li>
+</ul>
+
+<ul>
+    <li>
+        <h3>Yosemite National Park</h3>
+        <ul>
+            <li>Fact 1</li>
+            <li>Fact 2</li>
+            <li>Fact 3</li>
+            <li>Fact 4</li>
+        </ul>
+    </li>
+</ul>
+
+<ul>
+    <li>
+        <h3>Grand Canyon National Park</h3>
+        <ul>
+            <li>Fact 1</li>
+            <li>Fact 2</li>
+            <li>Fact 3</li>
+            <li>Fact 4</li>
+        </ul>
+    </li>
+</ul>
+
+<button id="highlightButton">Highlight Last List Items</button>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function() {
@@ -52,8 +94,19 @@
             e.preventDefault();
             $('dd').toggleClass('invisible');
         });
+
+        $('#highlightButton').click(function() {
+            $('ul li:last-child').addClass('highlight');
+        });
+
+        $('h3').click(function() {
+            $(this).next('ul').find('li').css('font-weight', 'bold');
+        });
+
+        $('li').click(function() {
+            $(this).parent().find('li:first-child').css('color', 'blue');
+        });
     });
 </script>
-
 </body>
 </html>
