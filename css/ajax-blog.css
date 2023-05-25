@@ -1,0 +1,22 @@
+/* Custom CSS styles for your AJAX blog */
+
+body {
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.post {
+    margin-bottom: 20px;
+}
+
+.post-title {
+    font-weight: bold;
+}
+
+.post-body {
+    margin-top: 5px;
+}

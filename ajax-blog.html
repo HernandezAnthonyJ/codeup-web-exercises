@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center">AJAX Blog</h1>
+
+    <div id="posts"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    (function () {
+        "use strict";
+
+        // Use Ajax to load the contents of blog.json and add the data from it to your #posts div.
+        // Add additional entries to blog.json and make sure your changes are reflected on the page.
+
+        $.ajax({
+            url: "data/blog.json",
+            type: "GET",
+            dataType: "json",
+        }).done(function (data) {
+            console.log(data);
+            data.forEach(function (post) {
+                let row = $("<div>");
+                row.append($("<h2>").text(post.title));
+                row.append($("<p>").text(post.content));
+                row.append($("<p>").text(post.date));
+                $("#posts").append(row);
+            });
+        });
+    })();
+</script>
+</body>
+</html>
