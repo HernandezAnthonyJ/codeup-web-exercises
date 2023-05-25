@@ -1,0 +1,18 @@
+/* Custom CSS  */
+
+body {
+    padding: 20px;
+}
+
+#refreshButton {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
