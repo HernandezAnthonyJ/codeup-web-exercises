@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mapbox Maps API Example</title>
+  <title>Mapbox Maps API</title>
   <meta charset="utf-8" />
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet" />
+
   <style>
-    #map {
-      /* the width and height may be set to any size */
-      width: 100%;
-      height: 700px;
-    }
+    body { margin: 0; padding: 0; }
+    #map { position: absolute; top: 0; bottom: 50px; width: 100%; }
+    #controls { position: absolute; bottom: 0; left: 10px; }
   </style>
+
 </head>
 <body>
+
 <div id="map"></div>
+<div id="controls"> <!--contains zoom level input, address & buttons-->
+  <label for="zoom">Zoom Level:</label>
+<select id="zoom"> <!--change zoom levels-->
+    <option value="5">5</option>
+    <option value="15" selected>15</option> <!-- selected by default -->
+    <option value="20">20</option>
+  </select>
+  <br>
+  <label for="address">Enter Address:</label>
+  <input type="text" id="address" placeholder="Enter address">
+  <button id="centerButton">Center Map</button>
+  <br>
+ <button id="toggleMarkers">Toggle Markers</button> <!-- "toggleMarkers" to hide/show all markers on the map.-->
+</div>
 <script src="js/keys.js"></script>
 
 <script>
   mapboxgl.accessToken = myMapboxKey;
 
-  var restaurants = [ //restaurants array
+  var restaurants = [ //restaurants array with description for popup
     {
       name: 'First Watch',
-      location: [-112.262200, 33.537250] // Longitude, latitude of the restaurant location
+      location: [-112.262200, 33.537250], // Longitude, latitude of the restaurant location
+      description: '<h3>First Watch</h3><p>My sisters go to restaurant that eat at everytime I go home</p><img src="img/First%20Watch.jpeg" width="200">'
     },
     {
       name: 'Broken Yolk Cafe',
-      location: [-117.26659, 33.09165]
+      location: [-117.26659, 33.09165],
+      description: '<h3>Broken Yolk Cafe</h3><p>#1 Stop for Eggs Benedict! </p><img src="img/Broken%20Yolk.png" width="200">'
     },
     {
       name: 'Cafe Aquarius',
-      location: [-114.57312, 35.16797]
+      location: [-114.57312, 35.16797],
+      description: '<h3>Cafe Aquarius</h3><p>Favorite breakfast spot at my favorite vacation place to be!</p><img src="img/Cafe%20A.jpg" width="200">'
     }
   ];
 
@@ -41,12 +59,64 @@
     center: [-122.4194, 37.7749],
     zoom: 5
   });
+  var markers = []; <!-- empty markers array to store the markers created for each restaurant -->
+
   restaurants.forEach(function(restaurant) {
     var marker = new mapboxgl.Marker()
             .setLngLat(restaurant.location)
-            .setPopup(new mapboxgl.Popup().setHTML('<h3>' + restaurant.name + '</h3>'))
+            .setPopup(new mapboxgl.Popup({ closeButton: false, maxWidth: 'none' }).setHTML(restaurant.description))
             .addTo(map);
+
+    markers.push(marker);
   });
+
+  // // Zoom level change event listener
+  // document.getElementById('zoom').addEventListener('change', function(e) {
+  //   var zoomLevel = parseInt(e.target.value);
+  //   map.setZoom(zoomLevel);
+  // });
+  //
+  // // Center button click event listener
+  // document.getElementById('centerButton').addEventListener('click', function() {
+  //   var address = document.getElementById('address').value;
+  //   if (address !== '') {
+  //     geocode(address);
+  //   }
+  // });
+  //
+  // // Toggle markers button click event listener
+  // document.getElementById('toggleMarkers').addEventListener('click', function() {
+  //   markers.forEach(function(marker) {
+  //     if (marker.getPopup().isOpen()) {
+  //       marker.togglePopup();
+  //     }
+  //     marker.toggle();
+  //   });
+  // });
+  //
+  // // Function to geocode the entered address and center the map
+  // function geocode(address) {
+  //   fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) + '.json?access_token=' + mapboxgl.accessToken)
+  //           .then(function(response) {
+  //             return response.json();
+  //           })
+  //           .then(function(data) {
+  //             if (data.features.length > 0) {
+  //               var center = data.features[0].center;
+  //               map.setCenter(center);
+  //               map.setZoom(15);
+  //               var marker = new mapboxgl.Marker()
+  //                       .setLngLat(center)
+  //                       .addTo(map);
+  //               markers.push(marker);
+  //             } else {
+  //               console.log('No results found.');
+  //             }
+  //           })
+  //           .catch(function(error) {
+  //             console.log('Error:', error);
+  //           });
+  // }
 
 
 </script>
