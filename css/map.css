@@ -1,0 +1,89 @@
+/* map.css */
+
+body {
+    background-color: #F88379;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F88379;
+}
+
+nav .logo img {
+    width: 50px; /* Adjust the width as needed */
+    height: auto;
+}
+
+.navbar-text {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 18px; /* Adjust the font size as needed */
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+}
+
+nav li a i {
+    margin-right: 5px;
+}
+
+#controls {
+    background-color: #F88379;
+}
+
+html, body, #address {
+    height: 100%;
+    margin: 0px;
+    padding: 0px
+}
+
+/*Still messing around with css :(  i'll come back later*/
+.controls {
+    margin-top: 16px;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#map {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 400px;
+}
+
+#map:focus {
+    border-color: #4d90fe;
+}
+
+.map-container {
+    font-family: Roboto;
+}
+
