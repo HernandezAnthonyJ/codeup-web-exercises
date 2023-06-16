@@ -2,54 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>jquery exercises</title>
+  <title>jQuery Exercises</title>
   <style>
-    .codeup {
-      border: 1px solid red;
-    }
-    .highlight {
-      background-color: yellow;
+    li {
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-
-<!-- Id Selectors -->
-<h1 id="title">This is the title</h1>
-<p id="paragraph">This is a paragraph</p>
-<ul id="list" class="codeup">
-  <li>Item 1</li>
-  <li>Item 2</li>
-  <li>Item 3</li>
-</ul>
-<div id="container" class="codeup">This is a container div</div>
-
-<!-- Class Selectors -->
-<h1 class="codeup">Codeup Heading 1</h1>
-<p class="codeup">Codeup Paragraph</p>
-<ul class="codeup">
-  <li>Codeup Item 1</li>
-  <li>Codeup Item 2</li>
-  <li>Codeup Item 3</li>
+<h1>Click me!</h1>
+<p>Double click me!</p>
+<ul>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
 </ul>
 
-<!-- Element Selectors -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  $(document).ready(function() {
-    // Element Selectors
-    $("li").css("font-size", "20px");
-    $("h1, p, li").addClass("highlight");
-
-    // Alert the contents of h1 element(s)
-    var h1Contents = $("h1").text();
-    alert("The contents of h1 element(s): " + h1Contents);
-
-    // Multiple Selectors
-    $("h1, p, li").addClass("highlight");
-  });
-</script>
+<script src="js/jquery.js"></script>
 </body>
 </html>
